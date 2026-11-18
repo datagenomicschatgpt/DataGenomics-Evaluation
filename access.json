@@ -1,7 +1,7 @@
 {
   "schema": "datagenomics-public-access/1",
-  "server_origin": "http://127.0.0.1:19674",
-  "mode": "loopback-historical-demo",
-  "status": "local_demo_via_BIO25_or_authorized_SSH_tunnel",
+  "server_origin": "https://192.168.101.191:19676",
+  "mode": "lan-argon2id-historical-demo",
+  "status": "provisional_LAN_VPN_password_access",
   "corporate_https_origin": null
 }
