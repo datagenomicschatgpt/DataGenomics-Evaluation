@@ -5,3 +5,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
 .doc{max-width:850px;padding-top:54px;padding-bottom:75px}.doc h1{font-size:40px;margin-bottom:25px}.doc h2{font-size:23px;margin-top:35px;letter-spacing:-.5px}.doc p,.doc li{font-size:14px;color:var(--muted)}.doc .code-box{margin:20px 0}.doc ul{padding-left:22px}.doc .breadcrumb{font-size:12px;margin:0 0 30px}.doc .scope-note{margin:25px 0}@media(max-width:650px){.doc h1{font-size:32px}.doc{padding-top:35px}.doc p,.doc li{font-size:13px}}
+
+.access-pending{opacity:.65;cursor:not-allowed;pointer-events:none}#server-access-status{font-size:12px}

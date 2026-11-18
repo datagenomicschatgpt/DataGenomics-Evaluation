@@ -29,3 +29,6 @@ un servidor estático local. GitHub Pages publica la raíz de `main`.
 Las versiones y enlaces se mantienen en `release.json` y en el HTML; al cambiar
 la versión, actualizar ambos. Las licencias de la aplicación y de sus
 bibliotecas se conservan en `licenses/` dentro del paquete.
+
+
+El enlace de acceso al servidor se configura en `access.json`, campo `server_origin`, con el origen HTTPS corporativo autorizado (sin rutas ni credenciales). Mientras sea `null`, la sección Acceso permanece explícitamente pendiente. La página pública nunca solicita ni verifica contraseñas. No cambiar el dominio de Pages hasta disponer de autorización y DNS corporativo.
