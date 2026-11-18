@@ -36,11 +36,19 @@ document.querySelectorAll('[data-copy]').forEach(button => {
     if ((!localDemo && target.protocol !== 'https:') || target.username || target.password || target.search || target.hash || target.pathname !== '/' || target.hostname.endsWith('.github.io')) return;
     const button = document.getElementById('server-access');
     if (!button) return;
-    button.href = target.origin + (localDemo ? '/cases.html' : '/login');
+    if (localDemo) {
+      button.removeAttribute('href');
+      button.setAttribute('aria-disabled', 'true');
+      button.classList.add('access-pending');
+      button.textContent = 'Sesión privada necesaria';
+      document.getElementById('server-access-status').textContent = 'El acceso directo devuelve «unauthorized» hasta crear la cookie con `dg url`. El acceso corporativo HTTPS con contraseña está pendiente.';
+      return;
+    }
+    button.href = target.origin + '/login';
     button.removeAttribute('aria-disabled');
     button.classList.remove('access-pending');
-    button.textContent = localDemo ? 'Abrir demo TRIO histórica ↗' : 'Entrar en DataGenomics ↗';
+    button.textContent = 'Entrar en DataGenomics ↗';
     button.rel = 'noreferrer';
-    document.getElementById('server-access-status').textContent = localDemo ? 'Demo local: ábrela desde BIO25 o con el túnel SSH al puerto 19674 y una sesión autorizada. El acceso corporativo HTTPS con contraseña está pendiente.' : 'Servidor: ' + target.host + '. Conecta a la red corporativa o VPN antes de entrar.';
+    document.getElementById('server-access-status').textContent = 'Servidor: ' + target.host + '. Conecta a la red corporativa o VPN antes de entrar.';
   } catch { /* Keep the explicit pending state on invalid configuration. */ }
 })();
