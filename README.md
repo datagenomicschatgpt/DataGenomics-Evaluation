@@ -1,0 +1,31 @@
+# DataGenomics · Evaluation Release
+
+Sitio público de descarga e instrucciones para DataGenomics Evaluation 0.2.3.
+
+- **Landing:** https://datagenomicschatgpt.github.io/DataGenomics-Evaluation/
+- **Instalador Ubuntu 22.04.5 x86_64:** [descargar .tar.gz](https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/download/v0.2.3-evaluation/DataGenomics-Evaluation-0.2.3-ubuntu22.04-x86_64.tar.gz)
+- **Integridad:** [SHA256SUMS](https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/download/v0.2.3-evaluation/SHA256SUMS)
+- **Instrucciones:** [instalación y lanzamiento](https://datagenomicschatgpt.github.io/DataGenomics-Evaluation/docs/instalacion.html).
+
+Este repositorio contiene exclusivamente la landing y documentación pública.
+El instalador se publica como asset de una GitHub Release; no se almacena en el
+historial Git. Los repositorios de desarrollo y ciencia conservan su visibilidad
+privada. No se incluyen datos de pacientes, curaciones, credenciales ni bases
+científicas restringidas.
+
+La aplicación se ejecuta en el servidor de la instalación. Los componentes
+externos se configuran con los permisos del responsable. Descargar el instalador
+no concede acceso a repositorios privados. Los módulos empaquetados de
+PyInstaller son inspeccionables; el ejecutable no cifra el código.
+
+Alcance: instalación y evaluación técnica. El perfil operativo para un TRIO real
+sigue pendiente de conexión y admisión específica. No se declara validación
+clínica. [Alcance](https://datagenomicschatgpt.github.io/DataGenomics-Evaluation/docs/alcance.html).
+
+## Desarrollo de esta página
+
+Sitio estático sin dependencias, analítica ni secretos. Abrir `index.html` o usar
+un servidor estático local. GitHub Pages publica la raíz de `main`.
+Las versiones y enlaces se mantienen en `release.json` y en el HTML; al cambiar
+la versión, actualizar ambos. Las licencias de la aplicación y de sus
+bibliotecas se conservan en `licenses/` dentro del paquete.

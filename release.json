@@ -1,0 +1,16 @@
+{
+  "version": "0.2.3",
+  "channel": "evaluation",
+  "platform": "Ubuntu 22.04.5 LTS x86_64",
+  "filename": "DataGenomics-Evaluation-0.2.3-ubuntu22.04-x86_64.tar.gz",
+  "bytes": 8050916,
+  "sha256": "3a1d79161b929c28bc2a6bfdc196e4d78dae68c5b921b42ab6d033dbe2ad78c0",
+  "download_url": "https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/download/v0.2.3-evaluation/DataGenomics-Evaluation-0.2.3-ubuntu22.04-x86_64.tar.gz",
+  "release_url": "https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/tag/v0.2.3-evaluation",
+  "checksum_url": "https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/download/v0.2.3-evaluation/SHA256SUMS",
+  "scientific_resources_bundled": false,
+  "patient_data_bundled": false,
+  "clinical_validation_claimed": false,
+  "real_clinical_profile": "pending_operational_connection_and_case_resource_admission",
+  "application_source_repository_public": false
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Descarga DataGenomics Evaluation para Ubuntu 22.04.5. Instalador PyInstaller, instrucciones de instalación, arranque y recuperación.">
+  <meta name="theme-color" content="#432b69">
+  <meta property="og:title" content="DataGenomics · Evaluation Release">
+  <meta property="og:description" content="Tu entorno de evaluación TRIO. Descarga para Ubuntu, instalación y lanzamiento paso a paso.">
+  <meta property="og:type" content="website">
+  <title>DataGenomics — Descarga e instalación</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Ir al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="DataGenomics inicio"><img src="assets/mark.svg" alt="" width="34" height="34"><span>Data<span class="brand-light">Genomics</span></span></a>
+    <nav aria-label="Navegación principal"><a href="#instalacion">Instalar</a><a href="#lanzamiento">Lanzar</a><a href="#acceso">Componentes privados</a><a class="nav-release" href="https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/tag/v0.2.3-evaluation">v0.2.3 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> EVALUATION RELEASE · 18 NOV 2026</p>
+        <h1>Tu entorno TRIO.<br><span>En tu infraestructura.</span></h1>
+        <p class="lead">Descarga DataGenomics y accede a la herramienta desde el navegador. Una instalación centralizada, con los recursos científicos y los datos bajo tu control.</p>
+        <div class="hero-actions"><a class="button primary" href="https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/download/v0.2.3-evaluation/DataGenomics-Evaluation-0.2.3-ubuntu22.04-x86_64.tar.gz"><span aria-hidden="true">↓</span> Descargar para Ubuntu</a><a class="button text-button" href="#instalacion">Cómo instalar <span aria-hidden="true">→</span></a></div>
+        <p class="download-meta">Ubuntu 22.04.5 LTS · x86_64 · .tar.gz · 8,1 MB</p>
+      </div>
+      <aside class="release-card" aria-label="Ficha de la descarga">
+        <div class="card-heading"><span class="package-icon" aria-hidden="true">DG</span><span class="tag">EVALUACIÓN</span></div>
+        <p class="small-label">PAQUETE DISPONIBLE</p><h2>DataGenomics <span>0.2.3</span></h2><p class="card-subtitle">PyInstaller · distribución onedir</p>
+        <dl><div><dt>Plataforma</dt><dd>Ubuntu 22.04.5 / x86_64</dd></div><div><dt>Instalación</dt><dd>En directorio de usuario</dd></div><div><dt>Interfaz</dt><dd>Navegador web</dd></div><div><dt>Datos y bases científicas</dt><dd>Externos al ejecutable</dd></div></dl>
+        <div class="verified"><span aria-hidden="true">✓</span> Instalación, arranque y parada comprobados</div>
+        <a class="checksum-link" href="https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/download/v0.2.3-evaluation/SHA256SUMS">Descargar SHA256SUMS <span aria-hidden="true">↗</span></a>
+      </aside>
+    </section>
+
+    <aside class="scope-note" aria-label="Alcance de la evaluación"><span class="note-icon" aria-hidden="true">i</span><p><strong>Alcance de esta entrega.</strong> Paquete para instalación y evaluación de la interfaz. La ejecución de un TRIO real requiere completar su perfil operativo, las entradas del caso y la admisión de recursos. Esta descarga no acredita validación clínica. <a href="docs/alcance.html">Consultar alcance y limitaciones →</a></p></aside>
+
+    <section class="features" aria-label="Distribución y acceso">
+      <article><span class="feature-number">01</span><h2>Descarga pública</h2><p>Instalador y checksum accesibles directamente, sin una cuenta con permisos privados.</p></article>
+      <article><span class="feature-number">02</span><h2>Aplicación local</h2><p>El servidor se instala en tu entorno. Los analistas acceden a través del navegador.</p></article>
+      <article><span class="feature-number">03</span><h2>Acceso controlado</h2><p>Pipeline, recursos y componentes privados conservan su configuración y permisos propios.</p></article>
+    </section>
+
+    <section id="instalacion" class="section install-section" aria-labelledby="install-title">
+      <div class="section-intro"><p class="eyebrow">DE LA DESCARGA AL NAVEGADOR</p><h2 id="install-title">Instala en tres pasos.</h2><p>Ejecuta los comandos en el servidor Ubuntu 22.04.5. Utiliza un directorio de instalación nuevo y un puerto libre; aquí usamos el 19676.</p></div>
+      <div class="steps">
+        <article class="step"><div class="step-title"><span>1</span><h3>Descarga y comprueba el paquete</h3></div><p>Crea una carpeta de trabajo. El checksum debe devolver <code>OK</code> antes de continuar.</p><div class="code-box"><div class="code-top"><span>TERMINAL · DESCARGA</span><button type="button" data-copy="download-code">Copiar</button></div><pre><code id="download-code">mkdir -p datagenomics-0.2.3
+cd datagenomics-0.2.3
+curl -fL -O https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/download/v0.2.3-evaluation/DataGenomics-Evaluation-0.2.3-ubuntu22.04-x86_64.tar.gz
+curl -fL -O https://github.com/datagenomicschatgpt/DataGenomics-Evaluation/releases/download/v0.2.3-evaluation/SHA256SUMS
+sha256sum -c SHA256SUMS</code></pre></div></article>
+        <article class="step"><div class="step-title"><span>2</span><h3>Descomprime e instala</h3></div><p>La aplicación, los datos y los logs se mantienen en directorios separados. La instalación de la aplicación no requiere <code>sudo</code>.</p><div class="code-box"><div class="code-top"><span>TERMINAL · INSTALACIÓN NUEVA</span><button type="button" data-copy="install-code">Copiar</button></div><pre><code id="install-code">tar -xzf DataGenomics-Evaluation-0.2.3-ubuntu22.04-x86_64.tar.gz
+./DataGenomics-Evaluation-0.2.3-ubuntu22.04-x86_64/install.sh \
+  --prefix "$HOME/DataGenomics" --port 19676</code></pre></div></article>
+        <article class="step" id="lanzamiento"><div class="step-title"><span>3</span><h3>Arranca y abre la herramienta</h3></div><p>Abre en el navegador la URL completa que devuelve <code>dg url</code>. Incluye la autenticación de tu instalación: consérvala en privado.</p><div class="code-box"><div class="code-top"><span>TERMINAL · LANZAMIENTO</span><button type="button" data-copy="start-code">Copiar</button></div><pre><code id="start-code">"$HOME/DataGenomics/bin/dg" start
+"$HOME/DataGenomics/bin/dg" status
+"$HOME/DataGenomics/bin/dg" url</code></pre></div></article>
+      </div>
+    </section>
+
+    <section class="operations section" aria-labelledby="operations-title"><div><p class="eyebrow">OPERACIÓN COTIDIANA</p><h2 id="operations-title">Un punto de entrada.<br>Tu entorno persiste.</h2><p>Los directorios de datos, trabajos, resultados, curaciones y logs permanecen fuera del ejecutable. Detén el servicio antes de una copia consistente.</p><a class="inline-link" href="docs/instalacion.html">Guía completa, actualización y recuperación <span aria-hidden="true">↗</span></a></div><div class="code-box"><div class="code-top"><span>TERMINAL · GESTIÓN</span><button type="button" data-copy="manage-code">Copiar</button></div><pre><code id="manage-code"># Consultar el estado
+"$HOME/DataGenomics/bin/dg" status
+
+# Parar antes de respaldar
+"$HOME/DataGenomics/bin/dg" stop
+"$HOME/DataGenomics/bin/dg" backup
+
+# Volver a arrancar
+"$HOME/DataGenomics/bin/dg" start</code></pre></div></section>
+
+    <section id="acceso" class="access-panel section" aria-labelledby="access-title"><div class="access-main"><p class="eyebrow">PÚBLICO PARA DESCARGAR · PRIVADO PARA OPERAR</p><h2 id="access-title">Cada componente,<br>con su acceso correspondiente.</h2><p>Esta página, las instrucciones y el instalador son públicos. Los repositorios científicos y de desarrollo conservan su acceso privado.</p><p>El responsable del servidor configura los componentes externos con una cuenta autorizada. La descarga no incluye credenciales ni concede permisos sobre otros repositorios.</p><a class="inline-link" href="docs/componentes-privados.html">Cómo se gestionan los componentes privados →</a></div><div class="access-list"><div><span class="access-icon" aria-hidden="true">↓</span><div><strong>Distribución</strong><p>Landing, instrucciones, instalador y SHA256.</p></div><span class="access-badge">PÚBLICO</span></div><div><span class="access-icon" aria-hidden="true">↗</span><div><strong>Componentes científicos</strong><p>Pipeline y recursos configurados por el responsable.</p></div><span class="access-badge private">AUTORIZADO</span></div><div><span class="access-icon" aria-hidden="true">⌂</span><div><strong>Casos y curaciones</strong><p>En tu almacenamiento. Fuera de esta descarga.</p></div><span class="access-badge private">PRIVADO</span></div></div></section>
+
+    <section class="faq section" aria-labelledby="faq-title"><div class="section-intro"><p class="eyebrow">ANTES DE EMPEZAR</p><h2 id="faq-title">Preguntas frecuentes</h2></div><details><summary>¿Puedo descargar el tar sin acceso a repositorios privados?</summary><p>Sí. El botón descarga el archivo directamente desde una GitHub Release pública. La aplicación y el acceso a componentes privados tienen permisos independientes.</p></details><details><summary>¿Incluye pacientes, bases científicas o un caso precargado?</summary><p>No. Una instalación nueva empieza sin casos. Los resultados autorizados y los recursos se incorporan desde tu entorno mediante sus contratos y controles correspondientes.</p></details><details><summary>¿Tengo que instalar Python en cada ordenador?</summary><p>Los analistas utilizan el navegador. La aplicación del servidor se distribuye con PyInstaller. Las etapas científicas necesitan su runtime y herramientas externos, configurados por el responsable.</p></details><details><summary>¿Cómo entro desde otro ordenador?</summary><p>La aplicación escucha por defecto en 127.0.0.1. Puedes usar un túnel SSH autorizado; para una instalación corporativa, el responsable debe configurar HTTPS, autenticación y acceso por LAN/VPN. El instalador no cambia la configuración de red.</p></details><details><summary>¿Esta versión está preparada para emitir resultados clínicos?</summary><p>Es una Evaluation Release. La instalación y el recorrido técnico tienen evidencias separadas de la admisión científica. La conexión operativa del piloto real sigue pendiente; consulta el alcance antes de procesar un caso.</p></details></section>
+  </main>
+
+  <footer><a class="brand" href="./"><img src="assets/mark.svg" alt="" width="26" height="26"><span>Data<span class="brand-light">Genomics</span></span></a><p>Evaluation Release 0.2.3 · Ubuntu 22.04.5 LTS</p><div><a href="https://github.com/datagenomicschatgpt/DataGenomics-Evaluation">Repositorio de esta página ↗</a><a href="docs/alcance.html">Alcance y licencias</a></div></footer>
+  <div id="copy-status" class="copy-status" role="status" aria-live="polite"></div>
+</body>
+</html>
