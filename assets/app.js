@@ -32,14 +32,15 @@ document.querySelectorAll('[data-copy]').forEach(button => {
     const config = await response.json();
     if (config.schema !== 'datagenomics-public-access/1' || !config.server_origin) return;
     const target = new URL(config.server_origin);
-    if (target.protocol !== 'https:' || target.username || target.password || target.search || target.hash || target.pathname !== '/' || target.hostname.endsWith('.github.io')) return;
+    const localDemo = config.mode === 'loopback-historical-demo' && target.origin === 'http://127.0.0.1:19674';
+    if ((!localDemo && target.protocol !== 'https:') || target.username || target.password || target.search || target.hash || target.pathname !== '/' || target.hostname.endsWith('.github.io')) return;
     const button = document.getElementById('server-access');
     if (!button) return;
-    button.href = target.origin + '/login';
+    button.href = target.origin + (localDemo ? '/cases.html' : '/login');
     button.removeAttribute('aria-disabled');
     button.classList.remove('access-pending');
-    button.textContent = 'Entrar en DataGenomics ↗';
+    button.textContent = localDemo ? 'Abrir demo TRIO histórica ↗' : 'Entrar en DataGenomics ↗';
     button.rel = 'noreferrer';
-    document.getElementById('server-access-status').textContent = 'Servidor: ' + target.host + '. Conecta a la red corporativa o VPN antes de entrar.';
+    document.getElementById('server-access-status').textContent = localDemo ? 'Demo local: ábrela desde BIO25 o con el túnel SSH al puerto 19674 y una sesión autorizada. El acceso corporativo HTTPS con contraseña está pendiente.' : 'Servidor: ' + target.host + '. Conecta a la red corporativa o VPN antes de entrar.';
   } catch { /* Keep the explicit pending state on invalid configuration. */ }
 })();

@@ -1,5 +1,7 @@
 {
   "schema": "datagenomics-public-access/1",
-  "server_origin": null,
-  "status": "awaiting_authorized_corporate_https_address"
+  "server_origin": "http://127.0.0.1:19674",
+  "mode": "loopback-historical-demo",
+  "status": "local_demo_via_BIO25_or_authorized_SSH_tunnel",
+  "corporate_https_origin": null
 }

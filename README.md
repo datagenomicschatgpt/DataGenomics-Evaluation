@@ -32,3 +32,5 @@ bibliotecas se conservan en `licenses/` dentro del paquete.
 
 
 El enlace de acceso al servidor se configura en `access.json`, campo `server_origin`, con el origen HTTPS corporativo autorizado (sin rutas ni credenciales). Mientras sea `null`, la sección Acceso permanece explícitamente pendiente. La página pública nunca solicita ni verifica contraseñas. No cambiar el dominio de Pages hasta disponer de autorización y DNS corporativo.
+
+Acceso provisional solicitado: `http://127.0.0.1:19674/cases.html`, modo `loopback-historical-demo`. Solo desde BIO25 o túnel SSH; requiere sesión privada existente. No autentica ni comparte tokens y no publica un puerto LAN. Se conserva pendiente el endpoint corporativo HTTPS y la candidata Argon2id no está desplegada.
